@@ -1,0 +1,27 @@
+/* Tailwind v4 এর প্রধান একক ইম্পোর্ট লাইন */
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Scrollbar for Chat Interface */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark .custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+
