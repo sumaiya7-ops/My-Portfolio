@@ -6,46 +6,62 @@ export default function FAQ() {
   const faqs = [
     {
       q: "What technologies do you use for development?",
-      a: "I primarily use TypeScript with React or Next.js for the frontend, and Node.js with PostgreSQL or MongoDB for the backend. I'm also proficient in Docker, AWS, and modern CI/CD practices."
+      a: "I primarily specialize in the MERN & Next.js ecosystem. For frontends, I engineer highly interactive layouts using JavaScript (ES6+), React, Next.js, Tailwind CSS, and Hero UI. For backends, I write production-ready server logic using Node.js and Express.js, mapped with MongoDB and Mongoose ODM models. I also implement advanced features like BetterAuth setups, Stripe integrations, and Role-Based Access Controls."
     },
     {
       q: "Do you take on freelance or contract work?",
-      a: "Yes, I am open to selective high-impact freelance projects and contract roles. Whether you need an MVP built from scratch or code architecture refactoring, I am ready to collaborate."
+      a: "Yes, I am actively available and completely open to high-impact freelance projects, remote full-time positions, and contract roles. Whether you need a scalable MVP built entirely from scratch or modern secure feature integrations added to your ongoing system, I am ready to collaborate."
     },
     {
       q: "What is your typical project timeline?",
-      a: "Timelines depend heavily on complexity. A premium static page takes 1-2 weeks, a core full-stack application (MVP) takes 4-8 weeks, while large enterprise-grade systems can stretch from 3-6 months."
+      a: "Project timelines depend heavily on the internal technical requirements and complexity. A premium fully responsive landing page or single-page application takes around 1-2 weeks. A comprehensive full-stack platform with secure authentication, payment routing, and full database CRUD workflows typically takes 4-8 weeks."
     }
   ];
 
   return (
-    <section className="max-w-4xl mx-auto px-6 py-16 mb-16 relative z-10">
-      <div className="text-center space-y-3 mb-12">
-        <span className="text-[10px] font-bold text-blue-600 tracking-[0.4em] uppercase block">F.A.Q</span>
-        <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Common Questions</h2>
-      </div>
+    <section id="faq" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
+      <div className="max-w-4xl mx-auto">
+        
+        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
+        <div className="text-center space-y-3 mb-12" data-aos="fade-down">
+          <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase bg-white border border-indigo-200 px-4 py-1.5 rounded-full inline-block shadow-sm">
+            F.A.Q
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-black text-indigo-950 tracking-tight leading-tight">
+            Common Questions
+          </h2>
+        </div>
 
-      <div className="space-y-4">
-        {faqs.map((item, index) => (
-          <div key={index} className="bg-white/60 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/50 rounded-[2rem] p-6 sm:p-8 shadow-sm transition-all duration-300">
-            <button
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-              className="w-full flex items-center justify-between text-left font-black text-slate-800 dark:text-white text-base sm:text-lg tracking-tight group"
+        {/* একর্ডিয়ন কন্টেইনার (AOS অ্যানিমেশনসহ) */}
+        <div className="space-y-4" data-aos="fade-up">
+          {faqs.map((item, index) => (
+            <div 
+              key={index} 
+              className="bg-white border border-indigo-50/60 rounded-[1.5rem] sm:rounded-[2rem] p-5 sm:p-8 shadow-sm hover:shadow-[0_15px_30px_rgba(99,102,241,0.06)] transition-all duration-300"
             >
-              <span>{item.q}</span>
-              <span className={`text-blue-600 text-xs transition-transform duration-300 transform ${openIndex === index ? 'rotate-180' : ''}`}>
-                <i className="fa-solid fa-chevron-down"></i>
-              </span>
-            </button>
-            
-            <div className={`transition-all duration-300 overflow-hidden ${openIndex === index ? 'max-h-[500px] mt-4' : 'max-h-0'}`}>
-              <p className="text-slate-500 dark:text-slate-400 text-sm sm:text-base leading-relaxed font-medium">
-                {item.a}
-              </p>
+              {/* কোয়েশ্চন টগল বাটন */}
+              <button
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                className="w-full flex items-center justify-between text-left font-black text-indigo-950 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm sm:text-lg tracking-tight group cursor-pointer"
+              >
+                <span className="pr-4 leading-snug">{item.q}</span>
+                <span className={`text-indigo-600 text-xs sm:text-sm transition-transform duration-300 transform ${openIndex === index ? 'rotate-180' : ''}`}>
+                  <i className="fa-solid fa-chevron-down"></i>
+                </span>
+              </button>
+              
+              {/* অ্যানিমেটেড আনসার ব্লক */}
+              <div className={`transition-all duration-300 overflow-hidden ${openIndex === index ? 'max-h-[500px] mt-4' : 'max-h-0'}`}>
+                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium pt-1 border-t border-indigo-50/50">
+                  {item.a}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
       </div>
     </section>
   );
 }
+

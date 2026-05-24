@@ -3,86 +3,156 @@ import React from 'react';
 const projects = [
   {
     id: "01",
-    title: "Personal Portfolio",
-    tags: ["NEXT.JS", "FRAMER MOTION", "GSAP", "TAILWIND"],
-    desc: "My high-performance developer portfolio built with Next.js, Framer Motion, and GSAP. Features cinematic animations, glassmorphism design, and full responsiveness.",
-    bg: "unsplash.com"
+    title: "Premium Personal Portfolio",
+    tags: ["NEXT.JS", "HERO UI", "AOS MOTION", "TAILWIND"],
+    desc: "A high-performance modern developer portfolio engineered with Next.js App Router and Hero UI. Features advanced custom scroll-to-reveal animations, modular component design, and absolute cross-device responsiveness.",
+    bg: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
   },
   {
     id: "02",
-    title: "Tiles Gallery Ecommerce",
-    tags: ["REACT", "NODE.JS", "MONGODB", "VERCEL"],
-    desc: "A full-featured tile ecommerce platform with product gallery, authentication, pricing, and a clean aesthetic design. 'Discover Your Perfect Aesthetic.'",
-    bg: "unsplash.com"
+    title: "Tiles Gallery E-Commerce",
+    tags: ["REACT", "NODE.JS", "MONGODB", "STRIPE API"],
+    desc: "A full-featured interior design tile commercial e-commerce web platform integrating production-ready checkout funnels via Stripe. Architected with strict Mongoose database relations and comprehensive data grids.",
+    bg: "https://images.unsplash.com/photo-1556740749-887f6717d7e4"
   },
   {
     id: "03",
-    title: "KeenKeeper — Social Media",
-    tags: ["REACT", "FIREBASE", "NETLIFY"],
-    desc: "Your personal shelf of meaningful connections. A relationship management app to browse, tend, and nurture the friendships that matter most.",
-    bg: "unsplash.com"
+    title: "KeenKeeper — Secure Social Hub",
+    tags: ["NEXT.JS", "BETTERAUTH", "MONGODB", "RBAC LAYER"],
+    desc: "A next-generation relational networking social system featuring secure session handling driven by BetterAuth Adapter layers. Enforces tight server-side route guards managed via Role-Based Access Control logic.",
+    bg: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
   },
   {
     id: "04",
-    title: "Modern Digitools Ecommerce",
-    tags: ["REACT", "JAVASCRIPT", "NETLIFY"],
-    desc: "A comprehensive digital tools & productivity software platform. Browse, purchase, and use powerful digital utilities designed for developers and creators.",
-    bg: "unsplash.com"
+    title: "Modern Digitools SaaS Platform",
+    tags: ["REACT", "EXPRESS.JS", "MONGO DB", "RESTFUL API"],
+    desc: "A full-stack productivity digital software distribution dashboard marketplace. Managed through clean object-oriented architecture, optimized aggregate query streams, and robust server middleware architectures.",
+    bg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
   }
 ];
 
 export default function Portfolio() {
   return (
-    <section id="projects" class="max-w-7xl mx-auto px-6 py-16 mb-16 relative z-10">
-      <div class="text-left mb-12">
-        <span class="text-[10px] font-bold text-blue-600 tracking-[0.4em] uppercase block mb-2">Selected Works</span>
-        <h2 class="text-4xl sm:text-5xl font-black text-slate-900 tracking-tight">Portfolio</h2>
-      </div>
+    <section
+      id="projects"
+      className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']"
+    >
+      <div className="max-w-7xl mx-auto">
+        
+        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
+        <div className="text-left mb-10 sm:mb-12" data-aos="fade-up">
+          <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase block mb-2 bg-white border border-indigo-200 px-3 py-1 rounded-full inline-block shadow-sm">
+            Selected Works
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-black text-indigo-950 tracking-tight">
+            Portfolio
+          </h2>
+        </div>
 
-      {/* Projects Grid */}
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        {projects.map((project) => (
-          <div key={project.id} class="group bg-white/60 border border-slate-200/50 rounded-[2.5rem] p-4 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between overflow-hidden relative min-h-[420px]">
-            {/* Background Image Container with Zoom Effect */}
-            <div class="absolute inset-0 z-0 overflow-hidden rounded-[2.2rem]">
-              <img src={project.bg} alt={project.title} class="w-full h-full object-cover opacity-15 mix-blend-luminosity group-hover:mix-blend-normal group-hover:opacity-30 group-hover:scale-110 transition duration-700" />
-            </div>
+        {/* প্রজেক্টস গ্রিড: মোবাইলে ১ কলাম, ট্যাবলেটে ও ডেক্সটপে ২ কলাম */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12">
+          {projects.map((project, idx) => (
+            <div
+              key={project.id}
+              data-aos="fade-up"
+              data-aos-delay={idx * 100} // প্রতিটি প্রজেক্ট কার্ড একটার পর একটা সিরিয়ালি ভেসে উঠবে
+              className="group relative overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-indigo-50/50 bg-white p-4 min-h-[440px] sm:min-h-[420px] flex flex-col justify-between transition-all duration-500 hover:-translate-y-2.5 hover:shadow-[0_25px_50px_rgba(165,180,252,0.25)]"
+            >
+              {/* ব্যাকগ্রাউন্ড ইমেজ ও থিম কন্ট্রোল লেয়ার */}
+              <div className="absolute inset-0 z-0 overflow-hidden rounded-[1.8rem] sm:rounded-[2.2rem]">
+                <img
+                  src={project.bg}
+                  alt={project.title}
+                  className="w-full h-full object-cover opacity-[0.06] group-hover:scale-105 group-hover:opacity-15 transition-all duration-700 ease-out"
+                />
+                {/* ইনডিগো থিম ওভারলে গ্রেডিয়েন্ট */}
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
+              </div>
 
-            {/* Top Info */}
-            <div class="relative z-10 p-4 flex justify-between items-start">
-              <span class="text-xs font-bold text-blue-600 bg-blue-50/80 backdrop-blur-sm px-4 py-1.5 rounded-full border border-blue-100">{project.id}</span>
-              <div class="flex flex-wrap gap-2 max-w-[80%] justify-end">
-                {project.tags.map((tag) => (
-                  <span key={tag} class="text-[9px] font-bold text-slate-500 bg-slate-100/80 backdrop-blur-sm px-2.5 py-1 rounded-md tracking-wider">{tag}</span>
-                ))}
+              {/* টপ ইনফো: আইডি এবং টেকনোলজি ট্যাগসমূহ */}
+              <div className="relative z-10 p-3 sm:p-4 flex justify-between items-start gap-4">
+                <span className="text-xs font-bold text-indigo-600 bg-indigo-50 px-3.5 py-1.5 rounded-full border border-indigo-100 shadow-sm flex-shrink-0">
+                  {project.id}
+                </span>
+
+                <div className="flex flex-wrap gap-1.5 max-w-[80%] justify-end">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[9px] font-bold text-indigo-900/80 bg-indigo-50/60 border border-indigo-100/30 px-2.5 py-1 rounded-md tracking-wider uppercase"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* বটম কন্টেন্ট: টাইটেল, ডেসক্রিপশন ও বাটনসমূহ */}
+              <div className="relative z-10 p-3 sm:p-4 space-y-4 rounded-b-[2rem]">
+                <div className="space-y-2">
+                  <h3 className="text-xl sm:text-2xl font-black text-indigo-950 group-hover:text-indigo-600 transition duration-300">
+                    {project.title}
+                  </h3>
+                  <p className="text-slate-600 text-xs sm:text-sm font-medium leading-relaxed">
+                    {project.desc}
+                  </p>
+                </div>
+
+                {/* অ্যাকশন বাটন লিংকসমূহ */}
+                <div className="flex items-center gap-6 pt-1">
+                  <a
+                    href="https://vercel.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:text-indigo-700 transition-all duration-300 hover:gap-3 cursor-pointer"
+                  >
+                    Live Demo
+                    <i className="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                  </a>
+
+                  <a
+                    href="https://github.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-xs font-bold text-slate-500 hover:text-indigo-950 transition-all duration-300 hover:gap-3 cursor-pointer"
+                  >
+                    GitHub
+                    <i className="fa-solid fa-code text-[10px]"></i>
+                  </a>
+                </div>
+              </div>
+
+              {/* হোভার ব্যাকগ্রাউন্ড লাক্সারি ইনডিগো গ্লো ইফেক্ট */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                <div className="absolute -top-24 -right-24 w-48 h-48 bg-indigo-500/10 blur-3xl rounded-full"></div>
               </div>
             </div>
+          ))}
+        </div>
 
-            {/* Bottom Text content */}
-            <div class="relative z-10 p-4 space-y-3 bg-gradient-to-t from-white/90 via-white/50 to-transparent rounded-b-[2rem]">
-              <h3 class="text-2xl font-black text-slate-900 group-hover:text-blue-600 transition duration-300">{project.title}</h3>
-              <p class="text-slate-500 text-sm font-medium leading-relaxed">{project.desc}</p>
-              <div class="flex gap-4 pt-2">
-                <a href="#" class="text-xs font-bold text-blue-600 flex items-center gap-1 hover:underline">Live Demo <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
-                <a href="#" class="text-xs font-bold text-slate-600 flex items-center gap-1 hover:underline">GitHub <i class="fa-solid fa-code text-[10px]"></i></a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+        {/* প্যাগিনেশন কন্ট্রোল প্যানেল (ফুল রেসপনসিভ) */}
+        <div className="flex items-center justify-center gap-6 sm:gap-8 mb-12" data-aos="fade-up">
+          <button className="text-[11px] sm:text-xs font-bold text-slate-400 hover:text-indigo-600 transition flex items-center gap-1.5 cursor-pointer">
+            <i className="fa-solid fa-arrow-left"></i>
+            PREV
+          </button>
+          <span className="w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center text-xs font-bold shadow-md shadow-indigo-100">
+            1
+          </span>
+          <button className="text-[11px] sm:text-xs font-bold text-slate-400 hover:text-indigo-600 transition flex items-center gap-1.5 cursor-pointer">
+            NEXT
+            <i className="fa-solid fa-arrow-right"></i>
+          </button>
+        </div>
 
-      {/* Pagination Controls */}
-      <div class="flex items-center justify-center gap-8 mb-12">
-        <button class="text-xs font-bold text-slate-400 hover:text-slate-800 transition flex items-center gap-1"><i class="fa-solid fa-arrow-left"></i> PREV</button>
-        <span class="w-8 h-8 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold shadow-md shadow-blue-600/20">1</span>
-        <button class="text-xs font-bold text-slate-400 hover:text-slate-800 transition flex items-center gap-1">NEXT <i class="fa-solid fa-arrow-right"></i></button>
-      </div>
+        {/* ভিউ মোর আর্কাইভ বাটন */}
+        <div className="text-center" data-aos="fade-up">
+          <button className="inline-flex items-center gap-2 bg-indigo-950 text-white px-6 py-3.5 sm:px-8 sm:py-4 rounded-xl sm:rounded-2xl font-bold text-xs sm:text-sm shadow-md hover:bg-indigo-600 hover:shadow-lg transition-all duration-300 cursor-pointer">
+            View More Archive Projects
+            <i className="fa-solid fa-arrow-right text-xs"></i>
+          </button>
+        </div>
 
-      {/* Archive Button */}
-      <div class="text-center">
-        <button class="inline-flex items-center gap-2 bg-slate-900 text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-md hover:bg-blue-600 hover:shadow-lg hover:shadow-blue-600/20 transition-all duration-300">
-          View More Archive Projects <i class="fa-solid fa-arrow-right text-xs"></i>
-        </button>
       </div>
     </section>
   );

@@ -1,97 +1,130 @@
+import React from 'react';
+
 export default function Timeline() {
   const milestones = [
     {
-      year: "2017 — 2018",
-      title: "🏫 Secondary School Certificate (SSC)",
-      institute: "Dhangora Model High School",
-      board: "Board of Intermediate & Secondary Education, Rajshahi",
-      result: "GPA 5.00",
-      desc: "Completed SSC in Science with the highest distinction — GPA 5.00. Focused on Physics, Chemistry, Biology & Mathematics. Actively participated in Science Fairs, Math Olympiad training, and school debates.",
-      tags: ["SCIENCE", ["MATH OLYMPIAD"], "SCIENCE FAIR"],
-      color: "blue"
-    },
-    {
-      year: "2019 — 2020",
-      title: "🎓 Higher Secondary Certificate (HSC)",
-      institute: "Islamia Government College",
-      board: "Board of Intermediate & Secondary Education, Rajshahi",
-      result: "GPA 5.00",
-      desc: "Completed HSC in Science with GPA 5.00. Focused on advanced Physics, Chemistry, Biology, and Mathematics. Actively engaged in hackathons, coding contests, and science fairs.",
-      tags: ["SCIENCE", "HACKATHONS", "CODING CONTESTS", "DEBATE"],
+      year: "HSC GRADUATE",
+      title: "🏛️ Humanities & Analytical Foundation",
+      institute: "Brahmanbaria Government Women's College",
+      board: "Higher Secondary Certificate (HSC) · Arts Background",
+      result: "DISTINCTION",
+      desc: "Developed strong critical thinking, comprehensive research methodologies, and analytical reasoning capabilities. This background laid the core baseline for structured logic and complex rule-based systematic thinking.",
+      tags: ["ANALYTICAL LOGIC", "CRITICAL THINKING", "HUMANITIES"],
       color: "purple"
     },
     {
-      year: "2025 — PRESENT",
-      title: "💻 Full Stack Developer Journey",
-      institute: "Self-Taught · Freelance Projects",
-      board: "MERN Stack · Next.js · Problem Solving",
+      year: "UNDERGRADUATE",
+      title: "⚖️ Bachelor of Laws (LLB) Honours",
+      institute: "Jatiya Kabi Kazi Nazrul Islam University",
+      board: "Legal Architecture · Systematic Analysis",
+      result: "LEGAL MIND",
+      desc: "Pursuing LLB Honours, mastering corporate laws, statutory interpretations, and structural logic algorithms. Legal training excels my capacity to interpret complex system rules and enforce airtight logic flow constraints in software engineering.",
+      tags: ["LEGAL ARCHITECTURE", "SYSTEMATIC ANALYSIS", "COMPLIANCE"],
+      color: "blue"
+    },
+    {
+      year: "B-13 EXPERT",
+      title: "💻 Full-Stack Software Engineering Awakening",
+      institute: "Programming Hero · Core MERN & Next.js Ecosystem",
+      board: "Advanced Development Workflow Pipelines",
       result: "30+ PROJECTS",
-      desc: "Started my programming journey with a deep focus on the MERN stack. Built 30+ real-world projects including ecommerce platforms, social media apps, and developer tools. Constantly leveling up.",
-      tags: ["REACT", "NEXT.JS", "NODE.JS", "MONGOOSE", "TAILWIND"],
-      color: "blue"
+      desc: "Engineered a bridge into heavy full-stack programming. Successfully mastered React, Next.js App Router, Node.js, Express, and complex MongoDB document schemas, transforming conceptual ideas into fully production-ready live web systems.",
+      tags: ["NEXT.JS", "NODE.JS", "MONGO DB", "STRIPE API", "HERO UI"],
+      color: "purple"
     },
     {
-      year: "2026 — FUTURE",
-      title: "🚀 Growing as a Software Engineer",
-      institute: "Open to Opportunities · Remote & Onsite",
-      board: "Next.js · TypeScript · System Design",
+      year: "PRESENT & FUTURE",
+      title: "🚀 Type-Safe Architecture & Scalability",
+      institute: "TypeScript Integration · SaaS Formats",
+      board: "Secure Authentication & Enterprise Security Gateways",
       result: "AVAILABLE NOW",
-      desc: "Currently expanding into TypeScript, system design, and scalable SaaS architecture. Actively seeking full-time or freelance roles where I can contribute to impactful products and grow.",
-      tags: ["TYPESCRIPT", "SYSTEM DESIGN", "OPEN SOURCE", "SAAS"],
-      color: "purple"
+      desc: "Expanding deep into TypeScript for absolute compile-time safety. Actively implementing production frameworks using BetterAuth adapter layers, Role-Based Access Controls (RBAC), and optimizing advanced server middleware infrastructure layouts.",
+      tags: ["TYPESCRIPT", "BETTERAUTH", "RBAC SEGMENT", "SAAS ARCHITECTURE"],
+      color: "blue"
     }
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-16 mb-16 relative z-10">
-      <div className="text-left space-y-3 mb-16">
-        <span className="text-[10px] font-bold text-blue-600 tracking-[0.4em] uppercase block">EVOLUTION</span>
-        <h2 className="text-4xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight">Journey & Milestones</h2>
-      </div>
+    <section id="timeline" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
+      <div className="max-w-6xl mx-auto">
+        
+        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
+        <div className="text-left space-y-3 mb-12 sm:mb-16" data-aos="fade-down">
+          <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase bg-white border border-indigo-200 px-3 py-1 rounded-full inline-block shadow-sm">
+            EVOLUTION
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-black text-indigo-950 tracking-tight leading-tight">
+            Journey & Milestones
+          </h2>
+        </div>
 
-      <div className="relative border-l-2 border-slate-200 dark:border-slate-800 ml-4 md:ml-1/2 md:translate-x-[-1px] space-y-16">
-        {milestones.map((item, index) => (
-          <div key={index} className="relative flex flex-col md:flex-row items-start md:justify-between group">
-            
-            {/* Timeline Center Dot Node */}
-            <div className={`absolute -left-[9px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-4 h-4 rounded-full border-4 bg-white dark:bg-slate-950 transition duration-300 ${
-              item.color === 'blue' ? 'border-blue-500 group-hover:bg-blue-500' : 'border-purple-500 group-hover:bg-purple-500'
-            }`}></div>
+        {/* টাইমলাইন মেইন কন্টেইনার - ১০০% রেসপনসিভ */}
+        <div className="relative border-l-2 border-indigo-200 dark:border-indigo-900/60 ml-3 md:ml-1/2 md:translate-x-[-1px] space-y-12 sm:space-y-16">
+          {milestones.map((item, index) => (
+            <div 
+              key={index} 
+              className="relative flex flex-col md:flex-row items-start md:justify-between group"
+            >
+              
+              {/* টাইমলাইন সেন্টার ডট নোড (মোবাইল ও ডেক্সটপ ফ্রেন্ডলি এক্সেন্ট লক) */}
+              <div className={`absolute -left-[18px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-4 h-4 rounded-full border-4 bg-white transition-all duration-300 ${
+                item.color === 'blue' ? 'border-indigo-600 group-hover:bg-indigo-600' : 'border-purple-600 group-hover:bg-purple-600'
+              }`}></div>
 
-            {/* Left Column: Metadata & Degree Card */}
-            <div className="w-full md:w-[44%] pl-6 md:pl-0 md:text-right space-y-2">
-              <span className={`text-xs font-bold tracking-widest block ${item.color === 'blue' ? 'text-blue-600' : 'text-purple-600'}`}>
-                {item.year}
-              </span>
-              <h3 className="text-lg font-black text-slate-900 dark:text-white tracking-tight">{item.title}</h3>
-              <p className="text-xs text-slate-500 font-bold">{item.institute}</p>
-              <p className="text-[11px] text-slate-400 font-medium">{item.board}</p>
-              <span className={`inline-flex text-[10px] font-black tracking-wider uppercase px-3 py-1 rounded-full border mt-2 ${
-                item.color === 'blue' ? 'bg-blue-50/50 dark:bg-blue-950/20 text-blue-600 border-blue-100' : 'bg-purple-50/50 dark:bg-purple-950/20 text-purple-600 border-purple-100'
-              }`}>
-                ★ {item.result}
-              </span>
-            </div>
+              {/* বাম কলাম: মেটাডাটা ও ইনফো প্যানেল (AOS স্লাইড মোশন) */}
+              <div 
+                className="w-full md:w-[44%] pl-6 md:pl-0 md:text-right space-y-1"
+                data-aos={window.innerWidth > 768 ? "fade-right" : "fade-up"}
+              >
+                <span className={`text-[10px] sm:text-xs font-black tracking-widest block uppercase ${item.color === 'blue' ? 'text-indigo-600' : 'text-purple-600'}`}>
+                  {item.year}
+                </span>
+                <h3 className="text-base sm:text-lg font-black text-indigo-950 tracking-tight leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-xs text-slate-500 font-bold">{item.institute}</p>
+                <p className="text-[10px] sm:text-[11px] text-slate-400 font-medium leading-relaxed">{item.board}</p>
+                
+                <span className={`inline-flex text-[9px] font-black tracking-wider uppercase px-2.5 py-0.5 rounded-full border mt-2 ${
+                  item.color === 'blue' ? 'bg-indigo-50 text-indigo-600 border-indigo-100' : 'bg-purple-50 text-purple-600 border-purple-100'
+                }`}>
+                  ★ {item.result}
+                </span>
+              </div>
 
-            {/* Right Column: Description Card */}
-            <div className="w-full md:w-[48%] mt-4 md:mt-0 pl-6 md:pl-0">
-              <div className="bg-white/60 dark:bg-slate-800/40 border border-slate-200/50 dark:border-slate-700/50 p-6 rounded-[2rem] shadow-sm hover:shadow-md transition-all duration-300">
-                <p className="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-medium mb-4">
-                  {item.desc}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag, i) => (
-                    <span key={i} className="text-[9px] font-extrabold text-slate-400 dark:text-slate-500 border border-slate-200/60 dark:border-slate-700/50 px-2.5 py-1 rounded-full uppercase tracking-wider">
-                      {tag}
-                    </span>
-                  ))}
+              {/* মাঝখানের স্পেসার (শুধুমাত্র ডেক্সটপে রেসপনসিভ স্পেসিং মেইনটেইন করার জন্য) */}
+              <div className="hidden md:block w-[4%]"></div>
+
+              {/* ডান কলাম: ডেসক্রিপশন কার্ড ব্লক (AOS স্লাইড মোশন) */}
+              <div 
+                className="w-full md:w-[48%] mt-3 md:mt-0 pl-6 md:pl-0"
+                data-aos={window.innerWidth > 768 ? "fade-left" : "fade-up"}
+              >
+                <div className="bg-white border border-indigo-50 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm hover:shadow-[0_15px_30px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-4">
+                    {item.desc}
+                  </p>
+                  
+                  {/* ক্যাপসুল ট্যাগ প্যানেল */}
+                  <div className="flex flex-wrap gap-1.5">
+                    {item.tags.map((tag, i) => (
+                      <span 
+                        key={i} 
+                        className="text-[9px] font-extrabold text-slate-400 border border-slate-100 px-2.5 py-1 rounded-full uppercase tracking-wider bg-slate-50/50"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
 
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 }
+

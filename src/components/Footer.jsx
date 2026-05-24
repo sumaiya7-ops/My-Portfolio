@@ -3,51 +3,62 @@ import React from 'react';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  // আপনার কাস্টম কন্টাক্ট এবং লিঙ্ক ম্যাপিং অবজেক্ট
+  const myInfo = {
+    name: "SUMAIYA SORHAD MARJIYA",
+    linkedinUrl: "https://linkedin.com",
+    githubUrl: "https://github.com", // আপনার গিটহাব লিঙ্কটি এখানে আপডেট করে নেবেন
+    facebookUrl: "https://facebook.com" // আপনার ফেসবুক লিঙ্কটি এখানে আপডেট করে নেবেন
+  };
+
   const navLinks = [
     { label: 'Home', href: '#home' },
-    { label: 'Projects Archive', href: '#archive' },
+    { label: 'Skills Stack', href: '#skills' },
+    { label: 'Academic Logs', href: '#academic' },
     { label: 'Hire Me', href: '#contact' },
-    { label: 'Resume', href: '#resume' },
   ];
 
   const socialLinks = [
-    { label: 'GITHUB', href: 'https://github.com', color: 'hover:text-black dark:hover:text-white hover:border-black dark:hover:border-white' },
-    { label: 'LINKEDIN', href: 'https://linkedin.com', color: 'hover:text-blue-600 hover:border-blue-600' },
-    { label: 'FACEBOOK', href: 'https://facebook.com', color: 'hover:text-blue-500 hover:border-blue-500' },
-    { label: 'X (TWITTER)', href: 'https://twitter.com', color: 'hover:text-slate-700 dark:hover:text-slate-300 hover:border-slate-700 dark:hover:border-slate-300' },
+    { label: 'GITHUB', href: myInfo.githubUrl, color: 'hover:text-black hover:border-black' },
+    { label: 'LINKEDIN', href: myInfo.linkedinUrl, color: 'hover:text-indigo-600 hover:border-indigo-600' },
+    { label: 'FACEBOOK', href: myInfo.facebookUrl, color: 'hover:text-blue-600 hover:border-blue-600' }
   ];
 
   return (
-    <footer className="border-t border-slate-100 dark:border-slate-800/60 bg-white/40 dark:bg-slate-900/20 backdrop-blur-md relative z-10">
+    <footer 
+      className="w-full bg-indigo-100 border-t border-indigo-200/60 relative z-10 font-['Plus_Jakarta_Sans']"
+      data-aos="fade-up"
+    >
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-12 gap-8 items-center justify-between">
         
-        {/* Left Column: Brand & Copyright Details */}
-        <div className="md:col-span-5 space-y-4">
+        {/* বাম কলাম: পার্সোনালাইজড ব্র্যান্ডিং ও কপিরাইট ডিটেইলস */}
+        <div className="md:col-span-5 space-y-3">
           <div className="flex items-center gap-3">
-            <span className="text-xl font-black text-slate-800 dark:text-white tracking-tight">
-              MH<span className="text-amber-500">.</span>
+            <span className="text-xl font-black text-indigo-950 tracking-tight">
+              Sumaiya<span className="text-indigo-600">.</span>
             </span>
           </div>
-          <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase leading-relaxed max-w-sm">
-            © {currentYear} MH SHANTO. FULL-STACK DEVELOPER FROM BANGLADESH. <br />
-            DESIGNING HIGH-PERFORMANCE SOLUTIONS.
+          <p className="text-[11px] font-bold text-slate-500 tracking-wider uppercase leading-relaxed max-w-md">
+            &copy; {currentYear} {myInfo.name}. <br />
+            BATCH 13 FULL-STACK WEB ENGINEER. <br />
+            ARCHITECTING SECURE AND HIGH-PERFORMANCE DIGITAL ECOSYSTEMS.
           </p>
         </div>
 
-        {/* Center Column: Quick Navigation Links (2x2 Grid Form) */}
-        <div className="md:col-span-3 grid grid-cols-2 gap-x-4 gap-y-2 text-left md:text-center">
+        {/* সেন্ট্রাল কলাম: কুইক ন্যাভিগেশন লিংকসমূহ (মোবাইল ফ্রেন্ডলি ২x২ গ্রিড) */}
+        <div className="md:col-span-3 grid grid-cols-2 gap-x-4 gap-y-3 text-left md:text-center">
           {navLinks.map((link, idx) => (
             <a
               key={idx}
               href={link.href}
-              className="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-widest hover:text-blue-600 dark:hover:text-blue-400 transition duration-300"
+              className="text-xs font-bold text-slate-600 uppercase tracking-widest hover:text-indigo-600 transition-colors duration-300"
             >
               {link.label}
             </a>
           ))}
         </div>
 
-        {/* Right Column: Dynamic Capsule Social Tags */}
+        {/* ডান কলাম: ডাইনামিক ক্যাপসুল সোশ্যাল ট্যাগসমূহ */}
         <div className="md:col-span-4 flex flex-wrap gap-2 md:justify-end">
           {socialLinks.map((social, idx) => (
             <a
@@ -55,7 +66,7 @@ export default function Footer() {
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
-              className={`px-4 py-2 border border-slate-200/60 dark:border-slate-800 rounded-full text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-widest transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 ${social.color}`}
+              className={`px-4 py-2 bg-white border border-indigo-100 rounded-full text-[10px] font-bold text-slate-500 tracking-widest transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 shadow-sm ${social.color}`}
             >
               {social.label}
             </a>

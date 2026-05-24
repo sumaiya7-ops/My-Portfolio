@@ -1,23 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sumaiya | Portfolio</title>
-    
-    <!-- Google Fonts URL Link Integration -->
-    <link rel="preconnect" href="googleapis.com">
-    <link rel="preconnect" href="gstatic.com" crossorigin>
-    <link href="googleapis.com" rel="stylesheet">
-    
-    <!-- Font Awesome Link for Dynamic Vector Icons -->
-    <link rel="stylesheet" href="cloudflare.com" />
-  </head>
-  <body class="bg-[#F8FAFC] dark:bg-[#0F172A]">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sumaiya Sarhand Marjiya | Full Stack Web Developer</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS CSS CDN (ফিক্সড লিঙ্ক) -->
+  <link rel="stylesheet" href="https://unpkg.com" />
+</head>
+
+<body class="bg-indigo-100 text-slate-800 min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
+  
+  <div id="root"></div>
+  
+  <script type="module" src="/src/main.jsx"></script>
+
+  <!-- AOS JS CDN (ফিক্সড লিঙ্ক) -->
+  <script src="https://unpkg.com"></script>
+  <script>
+    // প্রো-লেভেল স্ক্রোল অ্যানিমেশন কনফিগারেশন
+    AOS.init({
+      duration: 1000, 
+      once: false,    
+      offset: 100,    
+      delay: 50,
+    });
+  </script>
+</body>
 </html>
+
 
 
