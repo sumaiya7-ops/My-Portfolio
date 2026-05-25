@@ -32,16 +32,16 @@ export default function Timeline() {
       tags: ["NEXT.JS", "NODE.JS", "MONGO DB", "STRIPE API", "HERO UI"],
       color: "purple"
     },
-    {
-      year: "PRESENT & FUTURE",
-      title: "🚀 Type-Safe Architecture & Scalability",
-      institute: "TypeScript Integration · SaaS Formats",
-      board: "Secure Authentication & Enterprise Security Gateways",
-      result: "AVAILABLE NOW",
-      desc: "Expanding deep into TypeScript for absolute compile-time safety. Actively implementing production frameworks using BetterAuth adapter layers, Role-Based Access Controls (RBAC), and optimizing advanced server middleware infrastructure layouts.",
-      tags: ["TYPESCRIPT", "BETTERAUTH", "RBAC SEGMENT", "SAAS ARCHITECTURE"],
-      color: "blue"
-    }
+{
+  year: "2024 — Present",
+  title: "🚀 Full Stack Engineer",
+  institute: "Freelance & Personal Projects",
+  board: "Next.js · TypeScript · System Design",
+  result: "AVAILABLE FOR WORK",
+  desc: "Focused on building scalable full-stack applications with modern frontend architecture and backend systems.",
+  tags: ["NEXT.JS", "TYPESCRIPT", "SYSTEM DESIGN", "OPEN SOURCE"],
+  color: "purple"
+}
   ];
 
   return (

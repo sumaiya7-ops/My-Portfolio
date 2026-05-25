@@ -5,14 +5,14 @@ import Stats from './components/Stats';
 import About from './components/About';
 import Services from './components/Services';
 import EngineRoom from './components/EngineRoom';
-import Methodology from './components/Methodology';
+
 import TechStack from './components/TechStack';
 import Expertise from './components/Expertise';
 import Portfolio from './components/Portfolio';
 import BehindScenes from './components/BehindScenes';
 import Academic from './components/Academic';
 import Timeline from './components/Timeline';
-import FAQ from './components/FAQ';
+
 import Contact from './components/Contact';
 import ChatAI from './components/ChatAI';
 import FinalCTA from './components/FinalCTA';
@@ -48,14 +48,14 @@ export default function App() {
         <div className="w-full max-w-full" data-aos="fade-up"><About /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Services /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><EngineRoom /></div>
-        <div className="w-full max-w-full" data-aos="fade-up"><Methodology /></div>
+
         <div className="w-full max-w-full" data-aos="fade-up"><TechStack /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Expertise /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Portfolio /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><BehindScenes /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Academic /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Timeline /></div>
-        <div className="w-full max-w-full" data-aos="fade-up"><FAQ /></div>
+
         <div className="w-full max-w-full" data-aos="fade-up"><ChatAI /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Contact /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><FinalCTA /></div>
