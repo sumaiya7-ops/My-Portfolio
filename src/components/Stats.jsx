@@ -37,7 +37,7 @@ export default function StatsSection() {
 
           {/* Email Me - সরাসরি ইউজারের ইমেইল অ্যাপ ওপেন করবে */}
           <a
-            href="mailto:sumaiyamarjiya.dev@gmail.com" 
+            href="mailto:sumaiyakookie307@gmail.com" 
             className="bg-white border border-indigo-100 text-indigo-950 px-7 py-3.5 rounded-xl font-bold text-sm shadow-sm hover:border-indigo-400 hover:text-indigo-600 hover:scale-105 active:scale-98 transition-all duration-300 cursor-pointer text-center min-w-[140px]"
           >
             Email Me
