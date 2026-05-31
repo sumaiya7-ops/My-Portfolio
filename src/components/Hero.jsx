@@ -31,7 +31,7 @@ export default function Hero() {
               Full-Stack Developer From Bangladesh
             </h3>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-800">
-              I'm <span className="text-indigo-600 border-b-4 border-indigo-200">Sumaiya Sorhad Marjiya</span>
+              I'm <span className="text-indigo-600 border-b-4 border-indigo-200">Sumaiya Sarhad Marjiya</span>
             </h1>
           </div>
           
@@ -73,14 +73,13 @@ export default function Hero() {
             </div>
 
             <div>
-              <h4 className="text-xl sm:text-2xl font-black text-indigo-950">B-13</h4>
+              <h4 className="text-xl sm:text-2xl font-black text-indigo-950">15+</h4>
               <p className="text-[10px] sm:text-xs uppercase tracking-widest text-slate-400 font-bold mt-0.5">
-                Expert Core
+                Tech Stacks
               </p>
             </div>
           </div>
         </div>
-
 
 {/* 💻 ডান কলাম: প্রোফাইল ইমেজ ফ্রেম প্যানেল (AOS অ্যানিমেশনসহ) */}
 <div className="lg:col-span-5 flex justify-center w-full mt-6 lg:mt-0" data-aos="fade-left">
@@ -90,25 +89,26 @@ export default function Hero() {
     <div className="w-full h-full rounded-full overflow-hidden bg-indigo-50/50 border border-indigo-100 relative group shadow-inner">
       <img 
         src="/profile.jpg" 
-        alt="Sumaiya Sorhad Marjiya" 
+        alt="Sumaiya Sarhad Marjiya" 
         className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 ease-out"
       />
     </div>
     
-    {/* 👑 বাম ফ্লোটিং ব্যাজ: B-13 মুছে প্রফেশনাল স্ট্যাটাস দেওয়া হলো */}
-    <div className="absolute -left-4 sm:-left-6 top-1/4 bg-white/95 border border-indigo-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-md text-center min-w-[80px] sm:min-w-[95px] hover:scale-110 transition-transform duration-300 select-none">
+    {/* 👑 বাম ফ্লোটিং ব্যাজ */}
+    <div className="absolute -left-4 sm:-left-6 top-1/4 bg-white/95 border border-indigo-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-md flex flex-col items-center justify-center min-w-[85px] sm:min-w-[100px] hover:scale-110 transition-transform duration-300 select-none">
       <span className="block text-indigo-600 text-lg sm:text-xl"><i className="fa-solid fa-briefcase"></i></span>
       <span className="text-[9px] sm:text-[10px] font-black text-indigo-950 uppercase tracking-wider block mt-1">Full-Time</span>
     </div>
     
-    {/* 👑 ডান ফ্লোটিং ব্যাজ: প্রজেক্ট সংখ্যার বদলে কোয়ালিটি অ্যাসিওরেন্স দেওয়া হলো */}
-    <div className="absolute -right-4 sm:-right-6 bottom-1/4 bg-white/95 border border-indigo-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-md text-center min-w-[80px] sm:min-w-[95px] hover:scale-110 transition-transform duration-300 select-none">
+    {/* 👑 ডান ফ্লোটিং ব্যাজ */}
+    <div className="absolute -right-4 sm:-right-6 bottom-1/4 bg-white/95 border border-indigo-50 p-3 sm:p-4 rounded-xl sm:rounded-2xl shadow-md flex flex-col items-center justify-center min-w-[85px] sm:min-w-[100px] hover:scale-110 transition-transform duration-300 select-none">
       <span className="block text-amber-500 text-lg sm:text-xl"><i className="fa-solid fa-star"></i></span>
-      <span className="text-[9px] sm:text-[10px] font-black text-indigo-950 uppercase tracking-wider block mt-1">Top Elite</span>
+      <span className="text-[9px] sm:text-[10px] font-black text-indigo-950 uppercase tracking-wider block mt-1">MERN DEV</span>
     </div>
 
   </div>
 </div>
+
 
 
       </div>
