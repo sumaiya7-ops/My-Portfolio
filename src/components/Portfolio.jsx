@@ -1,35 +1,43 @@
 import React from 'react';
-
 const projects = [
   {
     id: "01",
-    title: "Premium Personal Portfolio",
-    tags: ["NEXT.JS", "HERO UI", "AOS MOTION", "TAILWIND"],
-    desc: "A high-performance modern developer portfolio engineered with Next.js App Router and Hero UI. Features advanced custom scroll-to-reveal animations, modular component design, and absolute cross-device responsiveness.",
-    bg: "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+    title: "Next-Gen Dynamic Web App", // এখানে আপনার নতুন প্রজেক্টের নাম দিন
+    tags: ["NEXT.JS", "MONGO DB", "TAILWIND", "API"],
+    desc: "An advanced production-grade software system architected with cutting-edge workflows. Optimizes modern state management, high-speed query execution, and pixel-perfect interactive design components.",
+    bg: "https://unsplash.com",
+    liveLink: "https://netlify.app", // নতুন প্রজেক্টের লিংক এখানে বসাবেন
+    gitLink: "https://github.com"
   },
   {
     id: "02",
-    title: "Tiles Gallery E-Commerce",
-    tags: ["REACT", "NODE.JS", "MONGODB", "STRIPE API"],
-    desc: "A full-featured interior design tile commercial e-commerce web platform integrating production-ready checkout funnels via Stripe. Architected with strict Mongoose database relations and comprehensive data grids.",
-    bg: "https://images.unsplash.com/photo-1556740749-887f6717d7e4"
+    title: "Pawsome Haven — Pet Adoption Platform",
+    tags: ["REACT", "NODE.JS", "MONGODB", "TAILWIND"],
+    desc: "A compassionate full-stack animal welfare web application engineered for pet adoptions. Features real-time adoption status updates, robust relational data schemas, dynamic category filtering, and an intuitive user dashboard.",
+    bg: "https://unsplash.com",
+    liveLink: "https://vercel.app",
+    gitLink: "https://github.com"
   },
   {
     id: "03",
-    title: "KeenKeeper — Secure Social Hub",
-    tags: ["NEXT.JS", "BETTERAUTH", "MONGODB", "RBAC LAYER"],
-    desc: "A next-generation relational networking social system featuring secure session handling driven by BetterAuth Adapter layers. Enforces tight server-side route guards managed via Role-Based Access Control logic.",
-    bg: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+    title: "The Plant Kingdom — Premium Botanic Hub",
+    tags: ["HTML5", "CSS3", "JAVASCRIPT", "AOS MOTION"],
+    desc: "An exquisitely designed e-commerce storefront showcasing fluid micro-interactions and organic layout balancing. Features advanced semantic styling, dynamic product filtering, and a modern aesthetic aesthetic workflow.",
+    bg: "https://unsplash.com",
+    liveLink: "https://github.io",
+    gitLink: "https://github.com/The-Plant-Kingdom"
   },
   {
     id: "04",
-    title: "Modern Digitools SaaS Platform",
-    tags: ["REACT", "EXPRESS.JS", "MONGO DB", "RESTFUL API"],
-    desc: "A full-stack productivity digital software distribution dashboard marketplace. Managed through clean object-oriented architecture, optimized aggregate query streams, and robust server middleware architectures.",
-    bg: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+    title: "GitPulse — Real-time GitHub Issue Tracker",
+    tags: ["JAVASCRIPT", "GITHUB API", "ASYNC AWAIT", "CSS3"],
+    desc: "A production-grade developer workflow optimization tool powered directly by the official GitHub REST API. Enables seamless searching, real-time filtering, state management, and asynchronous tracking of global repository issues.",
+    bg: "https://unsplash.com",
+    liveLink: "https://github.io",
+    gitLink: "https://github.com/Github-Issues-Tracker"
   }
 ];
+
 
 export default function Portfolio() {
   return (

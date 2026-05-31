@@ -14,7 +14,7 @@ export default function StatsSection() {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 py-16 bg-slate-50 font-['Plus_Jakarta_Sans']">
+    <section className="w-full px-4 sm:px-6 py-16 bg-indigo-100 font-['Plus_Jakarta_Sans']">
       <div className="max-w-7xl mx-auto">
         
         {/* 🔘 ১. প্রো-ম্যাক্স অ্যাকশন বাটন প্যানেল */}
