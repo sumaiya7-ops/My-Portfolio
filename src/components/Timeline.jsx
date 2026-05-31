@@ -23,33 +23,33 @@ export default function Timeline() {
       color: "blue"
     },
     {
-      year: "B-13 EXPERT",
-      title: "💻 Full-Stack Software Engineering Awakening",
-      institute: "Programming Hero · Core MERN & Next.js Ecosystem",
-      board: "Advanced Development Workflow Pipelines",
+      year: "ENGINEERING",
+      title: "💻 Full-Stack Software Engineering Training",
+      institute: "Advanced Development Workflow Pipelines",
+      board: "Core MERN & Next.js Ecosystem",
       result: "30+ PROJECTS",
       desc: "Engineered a bridge into heavy full-stack programming. Successfully mastered React, Next.js App Router, Node.js, Express, and complex MongoDB document schemas, transforming conceptual ideas into fully production-ready live web systems.",
       tags: ["NEXT.JS", "NODE.JS", "MONGO DB", "STRIPE API", "HERO UI"],
       color: "purple"
     },
-{
-  year: "2024 — Present",
-  title: "🚀 Full Stack Engineer",
-  institute: "Freelance & Personal Projects",
-  board: "Next.js · TypeScript · System Design",
-  result: "AVAILABLE FOR WORK",
-  desc: "Focused on building scalable full-stack applications with modern frontend architecture and backend systems.",
-  tags: ["NEXT.JS", "TYPESCRIPT", "SYSTEM DESIGN", "OPEN SOURCE"],
-  color: "purple"
-}
+    {
+      year: "2025 — Present",
+      title: "🚀 Full Stack Engineer",
+      institute: "Freelance & Personal Projects",
+      board: "Next.js · TypeScript · System Design",
+      result: "AVAILABLE FOR WORK",
+      desc: "Focused on building scalable full-stack applications with modern frontend architecture and backend systems.",
+      tags: ["NEXT.JS", "TYPESCRIPT", "SYSTEM DESIGN", "OPEN SOURCE"],
+      color: "purple"
+    }
   ];
 
   return (
     <section id="timeline" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
       <div className="max-w-6xl mx-auto">
         
-        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
-        <div className="text-left space-y-3 mb-12 sm:mb-16" data-aos="fade-down">
+        {/* সেকশন হেডার */}
+        <div className="text-left space-y-3 mb-12 sm:mb-16" data-aos="fade-up">
           <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase bg-white border border-indigo-200 px-3 py-1 rounded-full inline-block shadow-sm">
             EVOLUTION
           </span>
@@ -58,7 +58,7 @@ export default function Timeline() {
           </h2>
         </div>
 
-        {/* টাইমলাইন মেইন কন্টেইনার - ১০০% রেসপনসিভ */}
+        {/* টাইমলাইন মেইন কন্টেইনার */}
         <div className="relative border-l-2 border-indigo-200 dark:border-indigo-900/60 ml-3 md:ml-1/2 md:translate-x-[-1px] space-y-12 sm:space-y-16">
           {milestones.map((item, index) => (
             <div 
@@ -66,15 +66,15 @@ export default function Timeline() {
               className="relative flex flex-col md:flex-row items-start md:justify-between group"
             >
               
-              {/* টাইমলাইন সেন্টার ডট নোড (মোবাইল ও ডেক্সটপ ফ্রেন্ডলি এক্সেন্ট লক) */}
+              {/* টাইমলাইন সেন্টার ডট নোড */}
               <div className={`absolute -left-[18px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-4 h-4 rounded-full border-4 bg-white transition-all duration-300 ${
                 item.color === 'blue' ? 'border-indigo-600 group-hover:bg-indigo-600' : 'border-purple-600 group-hover:bg-purple-600'
               }`}></div>
 
-              {/* বাম কলাম: মেটাডাটা ও ইনফো প্যানেল (AOS স্লাইড মোশন) */}
+              {/* বাম কলাম: মেটাডাটা ও ইনফো প্যানেল */}
               <div 
                 className="w-full md:w-[44%] pl-6 md:pl-0 md:text-right space-y-1"
-                data-aos={window.innerWidth > 768 ? "fade-right" : "fade-up"}
+                data-aos="fade-up"
               >
                 <span className={`text-[10px] sm:text-xs font-black tracking-widest block uppercase ${item.color === 'blue' ? 'text-indigo-600' : 'text-purple-600'}`}>
                   {item.year}
@@ -92,13 +92,13 @@ export default function Timeline() {
                 </span>
               </div>
 
-              {/* মাঝখানের স্পেসার (শুধুমাত্র ডেক্সটপে রেসপনসিভ স্পেসিং মেইনটেইন করার জন্য) */}
+              {/* মাঝখানের স্পেসার */}
               <div className="hidden md:block w-[4%]"></div>
 
-              {/* ডান কলাম: ডেসক্রিপশন কার্ড ব্লক (AOS স্লাইড মোশন) */}
+              {/* ডান কলাম: ডেসক্রিপশন কার্ড ব্লক */}
               <div 
                 className="w-full md:w-[48%] mt-3 md:mt-0 pl-6 md:pl-0"
-                data-aos={window.innerWidth > 768 ? "fade-left" : "fade-up"}
+                data-aos="fade-up"
               >
                 <div className="bg-white border border-indigo-50 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm hover:shadow-[0_15px_30px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-4">

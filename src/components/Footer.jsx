@@ -5,16 +5,16 @@ export default function Footer() {
 
   // আপনার কাস্টম কন্টাক্ট এবং লিঙ্ক ম্যাপিং অবজেক্ট
   const myInfo = {
-    name: "SUMAIYA SORHAD MARJIYA",
+    name: "SUMAIYA SARHAD MARJIYA", // 👑 নামের বানান নিখুঁত করা হয়েছে
     linkedinUrl: "https://linkedin.com",
-    githubUrl: "https://github.com", // আপনার গিটহাব লিঙ্কটি এখানে আপডেট করে নেবেন
-    facebookUrl: "https://facebook.com" // আপনার ফেসবুক লিঙ্কটি এখানে আপডেট করে নেবেন
+    githubUrl: "https://github.com", // আপনার গিটহাব লিঙ্ক
+    facebookUrl: "https://facebook.com" // আপনার ফেসবুক লিঙ্ক
   };
 
   const navLinks = [
     { label: 'Home', href: '#home' },
-    { label: 'Skills Stack', href: '#skills' },
-    { label: 'Academic Logs', href: '#academic' },
+    { label: 'Skills Stack', href: '#tech-stack' }, // 👑 সঠিক আইডি লিঙ্ক সেট করা হয়েছে
+    { label: 'Methodology', href: '#methodology' }, // 👑 একাডেমিক বদলে মেথডোলজি দেওয়া হয়েছে
     { label: 'Hire Me', href: '#contact' },
   ];
 
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
           <p className="text-[11px] font-bold text-slate-500 tracking-wider uppercase leading-relaxed max-w-md">
             &copy; {currentYear} {myInfo.name}. <br />
-            BATCH 13 FULL-STACK WEB ENGINEER. <br />
+            PROFESSIONAL FULL-STACK SOFTWARE ENGINEER. <br /> {/* 👑 ব্যাচ নম্বর সরিয়ে ইন্ডাস্ট্রি গ্রেড করা হয়েছে */}
             ARCHITECTING SECURE AND HIGH-PERFORMANCE DIGITAL ECOSYSTEMS.
           </p>
         </div>
@@ -77,3 +77,4 @@ export default function Footer() {
     </footer>
   );
 }
+

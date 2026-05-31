@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 export default function ChatAI() {
   const myInfo = {
     name: "Sumaiya Sorhad Marjiya",
-    email: "sumaiyakookie3072@gmail.com",
+    email: "sumaiyakookie307@gmail.com",
     number: "01826459605"
   };
 

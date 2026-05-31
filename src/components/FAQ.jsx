@@ -15,6 +15,10 @@ export default function FAQ() {
     {
       q: "What is your typical project timeline?",
       a: "Project timelines depend heavily on the internal technical requirements and complexity. A premium fully responsive landing page or single-page application takes around 1-2 weeks. A comprehensive full-stack platform with secure authentication, payment routing, and full database CRUD workflows typically takes 4-8 weeks."
+    },
+    {
+      q: "How do we get started on a project?",
+      a: "It is simple! You can use the 'Start a Project' button or scroll down directly to the Contact section and send over your project breakdown. I will review your requirements and reach out within 24 hours to schedule a deep-dive discovery call to map out the complete architecture roadmaps."
     }
   ];
 
@@ -22,7 +26,7 @@ export default function FAQ() {
     <section id="faq" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
       <div className="max-w-4xl mx-auto">
         
-        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
+        {/* সেকশন হেডার */}
         <div className="text-center space-y-3 mb-12" data-aos="fade-down">
           <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase bg-white border border-indigo-200 px-4 py-1.5 rounded-full inline-block shadow-sm">
             F.A.Q
@@ -32,7 +36,7 @@ export default function FAQ() {
           </h2>
         </div>
 
-        {/* একর্ডিয়ন কন্টেইনার (AOS অ্যানিমেশনসহ) */}
+        {/* একর্ডিয়ন কন্টেইনার */}
         <div className="space-y-4" data-aos="fade-up">
           {faqs.map((item, index) => (
             <div 
@@ -50,7 +54,7 @@ export default function FAQ() {
                 </span>
               </button>
               
-              {/* অ্যানিমেটেড আনসার ব্লক */}
+              {/* অ্যানিমেটেড আনসার ঙ্ক */}
               <div className={`transition-all duration-300 overflow-hidden ${openIndex === index ? 'max-h-[500px] mt-4' : 'max-h-0'}`}>
                 <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium pt-1 border-t border-indigo-50/50">
                   {item.a}
@@ -64,4 +68,3 @@ export default function FAQ() {
     </section>
   );
 }
-
