@@ -120,12 +120,13 @@ export default function Navbar() {
               {item.name}
             </a>
           ))}
-          <a 
-            href={`mailto:${myInfo.email}?subject=Hiring%20Sumaiya`}
-            className="sm:hidden block text-center bg-indigo-600 text-white py-2.5 rounded-xl text-sm font-bold shadow-md shadow-indigo-100 mt-1"
-          >
-            Hire Me
-          </a>
+      <a 
+            href="#contact"
+             onClick={() => setMobileMenuOpen(false)} // বাটনে ক্লিক করলে মোবাইল মেনুটি নিজে থেকেই বন্ধ হয়ে যাবে
+            className="sm:hidden block text-center bg-indigo-600 text-white py-2.5 rounded-xl text-sm font-bold shadow-md shadow-indigo-100 mt-1 cursor-pointer"
+             >
+              Hire Me
+           </a>
         </div>
       </div>
 
