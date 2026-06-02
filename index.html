@@ -15,7 +15,7 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cloudflare.com" />
 
-  <!-- 👑 AOS CSS CDN FIXED -->
+  <!-- AOS CSS CDN (ফিক্সড লিঙ্ক) -->
   <link rel="stylesheet" href="https://unpkg.com" />
 </head>
 
@@ -25,20 +25,16 @@
   
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- 👑 AOS JS CDN FIXED -->
+  <!-- AOS JS CDN (ফিক্সড লিঙ্ক) -->
   <script src="https://unpkg.com"></script>
   <script>
     // প্রো-লেভেল স্ক্রোল অ্যানিমেশন কনফিগারেশন
-    setTimeout(() => {
-      if (typeof AOS !== 'undefined') {
-        AOS.init({
-          duration: 1000, 
-          once: false,    
-          offset: 100,    
-          delay: 50,
-        });
-      }
-    }, 100);
+    AOS.init({
+      duration: 1000, 
+      once: false,    
+      offset: 100,    
+      delay: 50,
+    });
   </script>
 </body>
 </html>

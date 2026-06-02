@@ -40,9 +40,14 @@ export default function Hero() {
             <h3 className="text-xs sm:text-sm font-extrabold text-slate-500 tracking-[0.2em] uppercase block pt-1">
               🚀 Full-Stack Developer From Bangladesh
             </h3>
-            <h1 className="text-2xl sm:text-3xl font-bold text-slate-700">
-              I'm <span className="text-slate-900 font-extrabold relative inline-block after:content-[''] after:absolute after:bottom-1 after:left-0 after:w-full after:h-[8px] after:bg-indigo-300/60 after:-z-10">Sumaiya Sarhad Marjiya</span>
-            </h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-slate-750">
+  I'm <span className="text-slate-900 font-extrabold relative inline-block">
+    Sumaiya Sarhad Marjiya
+  
+    <span className="absolute bottom-1 left-0 w-full h-[8px] bg-indigo-300/60 rounded-full -z-10 pointer-events-none"></span>
+  </span>
+</h1>
+
           </div>
           
           <p className="text-slate-700 text-sm sm:text-base md:text-lg max-w-xl leading-relaxed font-medium">
