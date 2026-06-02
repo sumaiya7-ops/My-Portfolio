@@ -7,45 +7,50 @@
 
   <title>Sumaiya Sarhand Marjiya | Full Stack Web Developer</title>
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://googleapis.com">
-  <link rel="preconnect" href="https://gstatic.com" crossorigin>
-  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
 
-  <!-- Font Awesome Icons CDN (সমস্ত আইকন লোড করার গ্যারান্টি) -->
-  <link rel="stylesheet" href="https://cloudflare.com" />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
 
-  <!-- 👑 AOS CSS CDN (শতভাগ ফিক্সড ও অফিশিয়াল লিংক) -->
-  <link rel="stylesheet" href="https://unpkg.com" />
+  <!-- AOS CSS -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/aos@2.3.4/dist/aos.css"
+  />
 </head>
 
-<body class="bg-indigo-100 text-slate-800 min-h-screen antialiased selection:bg-indigo-500 selection:text-white">
-  
+<body
+  class="bg-indigo-100 text-slate-800 min-h-screen antialiased selection:bg-indigo-500 selection:text-white"
+>
   <div id="root"></div>
-  
+
+  <!-- React App -->
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- 👑 AOS JS CDN (শতভাগ ফিক্সড ও অফিশিয়াল লিংক) -->
-  <script src="https://unpkg.com"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
   <script>
-    // প্রো-লেভেল স্ক্রোল অ্যানিমেশন ইনিশিয়েলাইজার (Crash-Safe Guarded)
-    document.addEventListener("DOMContentLoaded", function() {
-      setTimeout(function() {
-        if (typeof AOS !== 'undefined') {
-          AOS.init({
-            duration: 1000, 
-            once: false,    
-            offset: 100,    
-            delay: 50,
-          });
-        }
-      }, 150);
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof AOS !== "undefined") {
+        AOS.init({
+          duration: 1000,
+          once: false,
+          offset: 100,
+          delay: 50,
+        });
+      }
     });
   </script>
 </body>
 </html>
-
-
-
-
 
