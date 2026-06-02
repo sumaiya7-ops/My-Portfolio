@@ -32,9 +32,9 @@ export default function Hero() {
           {/* মেইন টাইটেল এবং ইন্ট্রোডাকশন */}
           <div className="space-y-4">
             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
-              Crafting Next-Gen <br />
+              Building Scalable Web Applications <br />
               <span className="text-indigo-600">
-                Digital Experiences
+               For Modern Businesses
               </span>
             </h2>
             <h3 className="text-xs sm:text-sm font-extrabold text-slate-500 tracking-[0.2em] uppercase block pt-1">
@@ -72,32 +72,15 @@ export default function Hero() {
               Hire Me
             </a>
           </div>
-
-          {/* স্ট্যাটস মেট্রিক্স প্যানেল */}
-          <div className="flex flex-row items-center gap-8 sm:gap-12 pt-6 border-t border-indigo-300/40 max-w-md">
-            <div className="hover:scale-105 transition-transform">
-              <h4 className="text-2xl sm:text-3xl font-black text-indigo-950">20+</h4>
-              <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mt-1">Projects Built</p>
+            
+          
             </div>
-
-            <div className="hover:scale-105 transition-transform">
-              <h4 className="text-2xl sm:text-3xl font-black text-indigo-950">100%</h4>
-              <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mt-1">Commitment</p>
-            </div>
-
-            <div className="hover:scale-105 transition-transform">
-              <h4 className="text-2xl sm:text-3xl font-black text-indigo-950">15+</h4>
-              <p className="text-[10px] font-extrabold uppercase tracking-widest text-slate-500 mt-1">Tech Stacks</p>
-            </div>
-          </div>
-        </div>
-
-        {/* 💻 ডান কলাম: প্রোফাইল ইমেজ ফ্রেম প্যানেল */}
+               {/* 💻 ডান কলাম: প্রোফাইল ইমেজ ফ্রেম প্যানেল */}
         <div className="lg:col-span-5 flex justify-center w-full mt-10 lg:mt-0" data-aos="fade-left">
           <div className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 rounded-full bg-white p-4 shadow-[0_25px_50px_rgba(79,70,229,0.15)] border border-indigo-200 flex items-center justify-center transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_35px_60px_rgba(79,70,229,0.25)] group">
             
             {/* ঘূর্ণায়মান বর্ডার ইফেক্ট */}
-            <div className="absolute inset-0 rounded-full border-2 border-dashed border-indigo-300/80 group-hover:rotate-45 transition-transform duration-1000"></div>
+            <div className="absolute inset-0 rounded-full border border-indigo-200"></div>
             
             {/* প্রোফাইল ইমেজ */}
             <div className="w-full h-full rounded-full overflow-hidden bg-indigo-50 border border-indigo-200 relative shadow-inner z-10">
@@ -111,13 +94,14 @@ export default function Hero() {
             {/* 👑 বাম ফ্লোটিং ব্যাজ */}
             <div className="absolute -left-4 top-1/4 bg-white border border-indigo-100 p-3.5 rounded-2xl shadow-lg flex flex-col items-center justify-center min-w-[100px] hover:scale-110 transition-transform duration-300 select-none z-20">
               <span className="block text-indigo-600 text-xl"><i className="fa-solid fa-briefcase"></i></span>
-              <span className="text-[10px] font-extrabold text-indigo-950 uppercase tracking-wider block mt-1">Full-Time</span>
+              <span className="text-[10px] font-extrabold text-indigo-950 uppercase tracking-wider block mt-1">Available <br />
+         For Work</span>
             </div>
             
             {/* 👑 ডান ফ্লোটিং ব্যাজ */}
             <div className="absolute -right-4 bottom-1/4 bg-white border border-indigo-100 p-3.5 rounded-2xl shadow-lg flex flex-col items-center justify-center min-w-[100px] hover:scale-110 transition-transform duration-300 select-none z-20">
               <span className="block text-amber-500 text-xl"><i className="fa-solid fa-star"></i></span>
-              <span className="text-[10px] font-extrabold text-indigo-950 uppercase tracking-wider block mt-1">MERN DEV</span>
+              <span className="text-[10px] font-extrabold text-indigo-950 uppercase tracking-wider block mt-1">20+ <br />Projects</span>
             </div>
 
           </div>
