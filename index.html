@@ -12,10 +12,10 @@
   <link rel="preconnect" href="https://gstatic.com" crossorigin>
   <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- Font Awesome Icons -->
+  <!-- Font Awesome Icons CDN (সমস্ত আইকন লোড করার গ্যারান্টি) -->
   <link rel="stylesheet" href="https://cloudflare.com" />
 
-  <!-- AOS CSS CDN (ফিক্সড লিঙ্ক) -->
+  <!-- 👑 AOS CSS CDN (শতভাগ ফিক্সড ও অফিশিয়াল লিংক) -->
   <link rel="stylesheet" href="https://unpkg.com" />
 </head>
 
@@ -25,19 +25,26 @@
   
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- AOS JS CDN (ফিক্সড লিঙ্ক) -->
+  <!-- 👑 AOS JS CDN (শতভাগ ফিক্সড ও অফিশিয়াল লিংক) -->
   <script src="https://unpkg.com"></script>
   <script>
-    // প্রো-লেভেল স্ক্রোল অ্যানিমেশন কনফিগারেশন
-    AOS.init({
-      duration: 1000, 
-      once: false,    
-      offset: 100,    
-      delay: 50,
+    // প্রো-লেভেল স্ক্রোল অ্যানিমেশন ইনিশিয়েলাইজার (Crash-Safe Guarded)
+    document.addEventListener("DOMContentLoaded", function() {
+      setTimeout(function() {
+        if (typeof AOS !== 'undefined') {
+          AOS.init({
+            duration: 1000, 
+            once: false,    
+            offset: 100,    
+            delay: 50,
+          });
+        }
+      }, 150);
     });
   </script>
 </body>
 </html>
+
 
 
 
