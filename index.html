@@ -8,14 +8,14 @@
   <title>Sumaiya Sarhand Marjiya | Full Stack Web Developer</title>
 
   <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://googleapis.com">
+  <link rel="preconnect" href="https://gstatic.com" crossorigin>
+  <link href="https://googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="https://cloudflare.com" />
 
-  <!-- AOS CSS CDN (ফিক্সড লিঙ্ক) -->
+  <!-- 👑 AOS CSS CDN FIXED -->
   <link rel="stylesheet" href="https://unpkg.com" />
 </head>
 
@@ -25,19 +25,24 @@
   
   <script type="module" src="/src/main.jsx"></script>
 
-  <!-- AOS JS CDN (ফিক্সড লিঙ্ক) -->
+  <!-- 👑 AOS JS CDN FIXED -->
   <script src="https://unpkg.com"></script>
   <script>
     // প্রো-লেভেল স্ক্রোল অ্যানিমেশন কনফিগারেশন
-    AOS.init({
-      duration: 1000, 
-      once: false,    
-      offset: 100,    
-      delay: 50,
-    });
+    setTimeout(() => {
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000, 
+          once: false,    
+          offset: 100,    
+          delay: 50,
+        });
+      }
+    }, 100);
   </script>
 </body>
 </html>
+
 
 
 

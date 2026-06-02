@@ -83,7 +83,7 @@ export default function Portfolio() {
                 </span>
 
                 <div className="flex flex-wrap gap-1.5 max-w-[80%] justify-end">
-                  {navItems && project.tags.map((tag) => (
+                  {project.tags.map((tag) => (
                     <span
                       key={tag}
                       className="text-[9px] font-bold text-indigo-900/80 bg-indigo-50/60 border border-indigo-100/30 px-2.5 py-1 rounded-md tracking-wider uppercase"
