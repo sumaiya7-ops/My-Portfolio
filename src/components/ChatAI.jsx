@@ -2,8 +2,8 @@ import React, { useState, useRef, useEffect } from 'react';
 
 export default function ChatAI() {
   const myInfo = {
-    name: "Sumaiya Sorhad Marjiya",
-    email: "sumaiyakookie307@gmail.com",
+    name: "Sumaiya Sarhand Marjiya",
+    email: "sumaiyakookie307@gmail.com", // আপনার প্রয়োজন অনুযায়ী ২ যুক্ত বা বাদ দিয়ে ম্যাচ করে নেবেন
     number: "01826459605"
   };
 
@@ -38,30 +38,33 @@ export default function ChatAI() {
     setMessages(prev => [...prev, userMsg]);
 
     setTimeout(() => {
-      let aiText = "Thanks for your interest! Sumaiya is a highly dedicated full-stack software engineer with expertise in core development workflows.";
+      let aiText = "Thanks for asking! Sumaiya is a highly dedicated full-stack software engineer specialized in building optimized web solutions. Feel free to ask about her skills, projects, or contact details.";
       const cleanText = text.toLowerCase();
 
-      if (cleanText.includes('skills') || cleanText.includes('tech')) {
-        aiText = "Sumaiya is specialized in Full-Stack development. Her tech stack includes HTML5, CSS3, Tailwind CSS, JavaScript (ES6+), React, Next.js, Hero UI, BetterAuth, Node.js, Express.js, and MongoDB.";
-      } else if (cleanText.includes('projects') || cleanText.includes('builds')) {
-        aiText = "She has developed feature-rich production applications specializing in modular patterns, secure API integrations, payment processing setups via Stripe, and Role-Based Access Control (RBAC) layers.";
-      } else if (cleanText.includes('available') || cleanText.includes('work') || cleanText.includes('freelance')) {
-        aiText = "Yes! Sumaiya is completely ready and available for full-time remote roles, contract development, and freelance industry-focused collaborations.";
-      } else if (cleanText.includes('contact') || cleanText.includes('call') || cleanText.includes('email')) {
-        aiText = `You can instantly contact her by firing an Email to ${myInfo.email} or call/text directly on her phone at ${myInfo.number}.`;
+      // 🧠 ইন্টেলিজেন্ট কিওয়ার্ড ম্যাচিং আর্কিটেকচার
+      if (cleanText.includes('skill') || cleanText.includes('tech') || cleanText.includes('know') || cleanText.includes('stack')) {
+        aiText = "Sumaiya specializes in the MERN & Next.js ecosystems. Her core expertise includes JavaScript (ES6+), React.js, Next.js, Node.js, Express.js, MongoDB, Tailwind CSS, BetterAuth, and REST API Integration.";
+      } else if (cleanText.includes('project') || cleanText.includes('build') || cleanText.includes('work') || cleanText.includes('portfolio')) {
+        aiText = "She has engineered high-performance web systems including 'Pawsome Haven' (a pet adoption system) and dynamic e-commerce hubs. Her builds feature secure auth layers, Stripe payments, and clean modular structures.";
+      } else if (cleanText.includes('avail') || cleanText.includes('hire') || cleanText.includes('job') || cleanText.includes('freelance') || cleanText.includes('remote')) {
+        aiText = "Yes, absolutely! Sumaiya is actively looking for full-time remote opportunities, open-source collaborations, and freelance projects. She is ready to join your engineering workflow immediately.";
+      } else if (cleanText.includes('contact') || cleanText.includes('call') || cleanText.includes('email') || cleanText.includes('phone') || cleanText.includes('whatsapp')) {
+        aiText = `You can directly reach her via Email at ${myInfo.email} or ring her up at +88${myInfo.number}. She's also highly active on LinkedIn and WhatsApp!`;
+      } else if (cleanText.includes('hello') || cleanText.includes('hi ') || cleanText.includes('hey')) {
+        aiText = "Hello! Great to meet you. I'm ready to answer any questions you have about Sumaiya's development career and engineering skills.";
       }
 
       setMessages(prev => [...prev, { id: Date.now() + 1, sender: 'ai', text: aiText }]);
-    }, 800);
+    }, 600);
 
-    if (text === inputValue) setInputValue('');
+    setInputValue('');
   };
 
   return (
     <section id="ai-chat" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
       <div className="max-w-4xl mx-auto">
         
-        {/* সেকশন হেডার (AOS অ্যানিমেশনসহ) */}
+        {/* সেকশন হেডার */}
         <div className="text-center space-y-3 mb-10 sm:mb-12" data-aos="fade-down">
           <span className="text-[10px] font-bold text-indigo-600 tracking-[0.4em] uppercase bg-white border border-indigo-200 px-4 py-1.5 rounded-full inline-block shadow-sm">
             AI ASSISTANT
@@ -74,7 +77,7 @@ export default function ChatAI() {
           </p>
         </div>
 
-        {/* মেইন চ্যাট উইন্ডো কন্টেইনার - মোবাইলের জন্য হাইট অপ্টিমাইজড */}
+        {/* মেইন চ্যাট উইন্ডো কন্টেইনার */}
         <div 
           className="bg-white/80 border border-indigo-50/50 backdrop-blur-xl rounded-[2rem] sm:rounded-[2.5rem] shadow-[0_20px_50px_rgba(165,180,252,0.25)] overflow-hidden flex flex-col h-[480px] sm:h-[550px] relative"
           data-aos="zoom-in"
@@ -92,7 +95,7 @@ export default function ChatAI() {
             </div>
           </div>
 
-          {/* চ্যাট ফিড মেসেজ বাবল এরিয়া (টাচ স্ক্রোল অপ্টিমাইজড) */}
+          {/* চ্যাট ফিড এরিয়া */}
           <div className="flex-1 p-4 sm:p-6 overflow-y-auto space-y-4 custom-scrollbar bg-indigo-50/10 touch-pan-y">
             {messages.map((msg) => (
               <div key={msg.id} className={`flex ${msg.sender === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -108,7 +111,7 @@ export default function ChatAI() {
             <div ref={chatEndRef} />
           </div>
 
-          {/* সাজেস্টেড প্রশ্ন চিপস (মোবাইলের জন্য নো-র‍্যাপ হরাইজন্টাল সোয়াইপ লেআউট) */}
+          {/* সাজেস্টেড প্রশ্ন চিপস */}
           <div className="px-4 sm:px-6 py-2.5 flex flex-row overflow-x-auto gap-2 items-center bg-indigo-50/20 border-t border-indigo-50/50 custom-scrollbar snap-x touch-pan-x whitespace-nowrap">
             {suggestedQuestions.map((question, idx) => (
               <button
@@ -121,7 +124,7 @@ export default function ChatAI() {
             ))}
           </div>
 
-          {/* বটম মেসেজ ইনপুট ফর্ম (মোবাইল ফ্রেন্ডলি প্যাডিং) */}
+          {/* বটম মেসেজ ইনপুট ফর্ম */}
           <form 
             onSubmit={(e) => { e.preventDefault(); handleSend(inputValue); }}
             className="p-3 sm:p-4 border-t border-indigo-50 bg-indigo-50/30 flex items-center gap-2 sm:gap-3"

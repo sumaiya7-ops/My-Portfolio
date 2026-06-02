@@ -25,8 +25,9 @@ export default function Methodology() {
 
         {/* কার্ড গ্রিড লেআউট এবং ডেক্সটপ ডটেড লাইন্ কানেক্টর */}
         <div className="relative">
-          {/* লার্জ স্ক্রিনের জন্য কানেক্টিং ডটেড লাইন */}
-          <div className="hidden lg:block absolute top-1/2 left-4 right-4 h-0.5 border-t-2 border-dashed border-indigo-200 -translate-y-12 z-0"></div>
+          
+          {/* 👑 ফিক্সড ডেক্সটপ কানেক্টিং ডটেড লাইন (নম্বর বাবলগুলোর সাথে নিখুঁত অ্যালাইনমেন্ট) */}
+          <div className="hidden lg:block absolute top-[40px] left-[10%] right-[10%] h-0.5 border-t-2 border-dashed border-indigo-200/80 z-0"></div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
             {steps.map((step, idx) => (
@@ -34,19 +35,19 @@ export default function Methodology() {
                 key={idx} 
                 data-aos="fade-up"
                 data-aos-delay={idx * 100}
-                className="bg-white border border-indigo-50 p-6 sm:p-8 rounded-[2rem] space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.1)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
+                className="bg-white/90 backdrop-blur-sm border border-indigo-50 p-6 sm:p-8 rounded-[2rem] space-y-5 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.1)] hover:-translate-y-2 transition-all duration-300 group cursor-pointer"
               >
                 {/* নম্বর ব্যাজ */}
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-black text-base ${step.color} group-hover:rotate-12 transition-transform duration-300 shadow-inner`}>
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-black text-base relative z-10 ${step.color} group-hover:rotate-12 transition-transform duration-300 shadow-inner`}>
                   {step.num}
                 </div>
                 
                 {/* স্টেপ নাম ও ডেসক্রিপশন */}
-                <div className="space-y-1.5">
+                <div className="space-y-2">
                   <h3 className="text-xl font-black text-indigo-950 group-hover:text-indigo-600 transition-colors duration-200">
                     {step.name}
                   </h3>
-                  <p className="text-slate-500 text-xs font-semibold leading-relaxed">
+                  <p className="text-slate-600 text-xs font-semibold leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
@@ -59,3 +60,4 @@ export default function Methodology() {
     </section>
   );
 }
+

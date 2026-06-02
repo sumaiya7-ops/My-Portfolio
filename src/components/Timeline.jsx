@@ -46,7 +46,7 @@ export default function Timeline() {
 
   return (
     <section id="timeline" className="w-full px-4 sm:px-6 py-16 sm:py-20 bg-indigo-100 relative z-10 font-['Plus_Jakarta_Sans']">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         
         {/* সেকশন হেডার */}
         <div className="text-left space-y-3 mb-12 sm:mb-16" data-aos="fade-up">
@@ -58,59 +58,50 @@ export default function Timeline() {
           </h2>
         </div>
 
-        {/* টাইমলাইন মেইন কন্টেইনার */}
-        <div className="relative border-l-2 border-indigo-200 dark:border-indigo-900/60 ml-3 md:ml-1/2 md:translate-x-[-1px] space-y-12 sm:space-y-16">
+        {/* টাইমলাইন মেইন কন্টেইনার (মোবাইল ও ডেক্সটপ দুই ভিউতেই স্টেবল লেআউট) */}
+        <div className="relative border-l-2 border-indigo-200 dark:border-indigo-300/40 ml-3 md:ml-6 space-y-12">
           {milestones.map((item, index) => (
             <div 
               key={index} 
-              className="relative flex flex-col md:flex-row items-start md:justify-between group"
+              className="relative pl-6 md:pl-10 grid grid-cols-1 lg:grid-cols-12 gap-4 lg:gap-8 group"
             >
               
-              {/* টাইমলাইন সেন্টার ডট নোড */}
-              <div className={`absolute -left-[18px] md:left-1/2 md:-translate-x-1/2 top-1.5 w-4 h-4 rounded-full border-4 bg-white transition-all duration-300 ${
+              {/* টাইমলাইন ডট নোড */}
+              <div className={`absolute -left-[9px] top-1.5 w-4 h-4 rounded-full border-4 bg-white transition-all duration-300 ${
                 item.color === 'blue' ? 'border-indigo-600 group-hover:bg-indigo-600' : 'border-purple-600 group-hover:bg-purple-600'
               }`}></div>
 
-              {/* বাম কলাম: মেটাডাটা ও ইনফো প্যানেল */}
-              <div 
-                className="w-full md:w-[44%] pl-6 md:pl-0 md:text-right space-y-1"
-                data-aos="fade-up"
-              >
-                <span className={`text-[10px] sm:text-xs font-black tracking-widest block uppercase ${item.color === 'blue' ? 'text-indigo-600' : 'text-purple-600'}`}>
+              {/* বাম কলাম: মেটাডাটা ও টাইটেল (৪ কলাম) */}
+              <div className="lg:col-span-4 space-y-1" data-aos="fade-right">
+                <span className={`text-[10px] sm:text-xs font-black tracking-widest block uppercase ${item.color === 'blue' ? 'text-indigo-700' : 'text-purple-700'}`}>
                   {item.year}
                 </span>
-                <h3 className="text-base sm:text-lg font-black text-indigo-950 tracking-tight leading-snug">
+                <h3 className="text-base sm:text-lg font-black text-indigo-950 tracking-tight leading-snug group-hover:text-indigo-600 transition-colors">
                   {item.title}
                 </h3>
                 <p className="text-xs text-slate-500 font-bold">{item.institute}</p>
                 <p className="text-[10px] sm:text-[11px] text-slate-400 font-medium leading-relaxed">{item.board}</p>
                 
                 <span className={`inline-flex text-[9px] font-black tracking-wider uppercase px-2.5 py-0.5 rounded-full border mt-2 ${
-                  item.color === 'blue' ? 'bg-indigo-50 text-indigo-600 border-indigo-100' : 'bg-purple-50 text-purple-600 border-purple-100'
+                  item.color === 'blue' ? 'bg-indigo-50 text-indigo-700 border-indigo-200' : 'bg-purple-50 text-purple-700 border-purple-200'
                 }`}>
                   ★ {item.result}
                 </span>
               </div>
 
-              {/* মাঝখানের স্পেসার */}
-              <div className="hidden md:block w-[4%]"></div>
-
-              {/* ডান কলাম: ডেসক্রিপশন কার্ড ব্লক */}
-              <div 
-                className="w-full md:w-[48%] mt-3 md:mt-0 pl-6 md:pl-0"
-                data-aos="fade-up"
-              >
-                <div className="bg-white border border-indigo-50 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm hover:shadow-[0_15px_30px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium mb-4">
+              {/* ডান কলাম: ডেসক্রিপশন ও ট্যাগ কার্ড ব্লক (৮ কলাম) */}
+              <div className="lg:col-span-8" data-aos="fade-left">
+                <div className="bg-white border border-indigo-50 p-5 sm:p-6 rounded-[1.5rem] sm:rounded-[2rem] shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.12)] hover:-translate-y-1 transition-all duration-300">
+                  <p className="text-slate-700 text-xs sm:text-sm leading-relaxed font-medium mb-4">
                     {item.desc}
                   </p>
                   
-                  {/* ক্যাপসুল ট্যাগ প্যানেল */}
+                  {/* ক্যাপসুল ট্যাগ প্যানেল (হাই কনট্রাস্ট ও রিডেবল) */}
                   <div className="flex flex-wrap gap-1.5">
                     {item.tags.map((tag, i) => (
                       <span 
                         key={i} 
-                        className="text-[9px] font-extrabold text-slate-400 border border-slate-100 px-2.5 py-1 rounded-full uppercase tracking-wider bg-slate-50/50"
+                        className="text-[9px] font-extrabold text-slate-600 border border-indigo-100 px-2.5 py-1 rounded-full uppercase tracking-wider bg-indigo-50/50"
                       >
                         {tag}
                       </span>
@@ -127,4 +118,5 @@ export default function Timeline() {
     </section>
   );
 }
+
 

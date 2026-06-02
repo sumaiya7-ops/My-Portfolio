@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -46,7 +46,7 @@ export default function FAQ() {
               {/* কোয়েশ্চন টগল বাটন */}
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between text-left font-black text-indigo-950 hover:text-indigo-600 dark:hover:text-indigo-400 text-sm sm:text-lg tracking-tight group cursor-pointer"
+                className="w-full flex items-center justify-between text-left font-black text-indigo-950 hover:text-indigo-600 text-sm sm:text-lg tracking-tight group cursor-pointer"
               >
                 <span className="pr-4 leading-snug">{item.q}</span>
                 <span className={`text-indigo-600 text-xs sm:text-sm transition-transform duration-300 transform ${openIndex === index ? 'rotate-180' : ''}`}>
@@ -54,12 +54,17 @@ export default function FAQ() {
                 </span>
               </button>
               
-              {/* অ্যানিমেটেড আনসার ঙ্ক */}
-              <div className={`transition-all duration-300 overflow-hidden ${openIndex === index ? 'max-h-[500px] mt-4' : 'max-h-0'}`}>
-                <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium pt-1 border-t border-indigo-50/50">
-                  {item.a}
-                </p>
+              {/* 👑 ফিক্সড: বাটারের মতো স্মুথ গ্রিড-স্লাইড অ্যানিমেশন আর্কিটেকচার */}
+              <div className={`grid transition-all duration-300 ease-in-out ${
+                openIndex === index ? 'grid-rows-[1fr] opacity-100 mt-4' : 'grid-rows-[0fr] opacity-0'
+              }`}>
+                <div className="overflow-hidden">
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed font-medium pt-3 border-t border-indigo-50/50">
+                    {item.a}
+                  </p>
+                </div>
               </div>
+
             </div>
           ))}
         </div>
@@ -68,3 +73,4 @@ export default function FAQ() {
     </section>
   );
 }
+

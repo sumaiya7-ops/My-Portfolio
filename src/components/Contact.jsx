@@ -6,7 +6,7 @@ export default function Contact() {
     email: "sumaiyakookie307@gmail.com",
     number: "01826459605",
     whatsapp: "8801826459605", // কান্ট্রি কোডসহ হোয়াটসঅ্যাপ ফরম্যাট
-    linkedinUrl: "www.linkedin.com/in/sumaiya-sorhad" // আপনার আসল লিংকডইন প্রোফাইল লিঙ্ক
+    linkedinUrl: "https://linkedin.com" // 👑 ফিক্সড: https:// যুক্ত করা হয়েছে
   };
 
   return (
@@ -31,7 +31,7 @@ export default function Contact() {
             <h3 className="text-xs font-black tracking-widest text-slate-400 uppercase px-1">TALK TO ME</h3>
             
             {/* ১. ইমেইল কার্ড */}
-            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-rose-50 text-rose-500 border border-rose-100 flex items-center justify-center mx-auto text-lg group-hover:scale-110 transition-transform">
                 <i className="fa-regular fa-envelope"></i>
               </div>
@@ -39,13 +39,13 @@ export default function Contact() {
                 <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">EMAIL</span>
                 <span className="block text-xs sm:text-sm font-bold text-indigo-950 mt-1 break-all px-2">{myInfo.email}</span>
               </div>
-              <a href={`mailto:${myInfo.email}?subject=Inquiry%20From%20Portfolio`} className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all">
+              <a href={`mailto:${myInfo.email}?subject=Inquiry%20From%20Portfolio`} className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all cursor-pointer">
                 WRITE ME <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
 
-            {/* ২. হোয়াটসঅ্যাপ কার্ড (👑 লিংক সিনট্যাক্স ঠিক করা হয়েছে) */}
-            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            {/* ২. হোয়াটসঅ্যাপ কার্ড (👑 👑 ফিক্সড লিংক সিনট্যাক্স) */}
+            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-500 border border-emerald-100 flex items-center justify-center mx-auto text-lg group-hover:scale-110 transition-transform">
                 <i className="fa-brands fa-whatsapp"></i>
               </div>
@@ -53,13 +53,13 @@ export default function Contact() {
                 <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">WHATSAPP</span>
                 <span className="block text-sm font-bold text-indigo-950 mt-1">{myInfo.number}</span>
               </div>
-              <a href={`https://wa.me{myInfo.whatsapp}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all">
+              <a href={`https://wa.me{myInfo.whatsapp}`} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all cursor-pointer">
                 WRITE ME <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
 
             {/* ৩. লিংকডইন কার্ড */}
-            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer">
+            <div className="bg-white border border-indigo-50 p-6 rounded-[2rem] text-center space-y-4 shadow-sm hover:shadow-[0_20px_40px_rgba(99,102,241,0.08)] hover:-translate-y-1 transition-all duration-300 group">
               <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-500 border border-indigo-100 flex items-center justify-center mx-auto text-lg group-hover:scale-110 transition-transform">
                 <i className="fa-brands fa-linkedin-in"></i>
               </div>
@@ -67,13 +67,13 @@ export default function Contact() {
                 <span className="block text-[10px] font-bold text-slate-400 uppercase tracking-widest">LINKEDIN</span>
                 <span className="block text-sm font-bold text-indigo-950 mt-1">Sumaiya Sarhad</span>
               </div>
-              <a href={myInfo.linkedinUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all">
+              <a href={myInfo.linkedinUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 text-xs font-bold text-indigo-600 hover:gap-3 transition-all cursor-pointer">
                 WRITE ME <i className="fa-solid fa-arrow-right"></i>
               </a>
             </div>
           </div>
 
-          {/* ডান কলাম: ১০০% রিয়েল ও সাবমিট-রেডি কন্টাক্ট ফর্ম (👑 Netlify Forms এম্বেড করা হয়েছে) */}
+          {/* ডান কলাম: ১০০% রিয়েল ও সাবমিট-রেডি কন্টাক্ট ফর্ম */}
           <div className="lg:col-span-7 flex flex-col gap-6 w-full" data-aos="fade-left">
             <h3 className="text-xs font-black tracking-widest text-slate-400 uppercase px-1">WRITE ME YOUR PROJECT</h3>
             
@@ -131,3 +131,4 @@ export default function Contact() {
     </section>
   );
 }
+

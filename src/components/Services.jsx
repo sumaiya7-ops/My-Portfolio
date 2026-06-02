@@ -24,8 +24,8 @@ export default function Services() {
           </h2>
         </div>
 
-        {/* সার্ভিসেস গ্রিড লেআউট */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* 👑 ফিক্সড গ্রিড: ২য় লাইনের কার্ডগুলোকে ডেক্সটপে সেন্টারে রাখার জন্য justify-center যুক্ত করা হয়েছে */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {services.map((srv, idx) => (
             <div 
               key={idx} 
@@ -33,20 +33,25 @@ export default function Services() {
               data-aos-delay={idx * 100}
               className={`p-6 sm:p-8 rounded-[2rem] border transition-all duration-300 flex flex-col justify-between min-h-[260px] sm:min-h-[250px] group cursor-pointer hover:-translate-y-2 shadow-sm ${
                 srv.highlight 
-                ? 'bg-indigo-600 text-white border-indigo-600 shadow-[0_20px_40px_rgba(79,70,229,0.25)]' 
+                ? 'bg-gradient-to-br from-indigo-600 to-indigo-700 text-white border-indigo-600 shadow-[0_20px_40px_rgba(79,70,229,0.25)]' 
                 : 'bg-white border-indigo-50 text-indigo-950 hover:shadow-[0_20px_40px_rgba(165,180,252,0.15)] hover:border-indigo-400'
+              } ${
+                // ডেক্সটপ ভিউতে শেষ ২টি কার্ডকে চমৎকার সেন্টারে রাখার লজিক
+                idx === 3 ? 'lg:col-start-1 lg:col-span-1 md:col-span-1 lg:ml-auto lg:w-full' : ''
+              } ${
+                idx === 4 ? 'lg:col-start-2 lg:col-span-1 md:col-span-1 lg:mr-auto lg:w-full' : ''
               }`}
             >
               <div className="space-y-4">
                 {/* ডাইনামিক আইকন বক্স */}
-                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-lg transition-transform duration-300 group-hover:scale-110 shadow-inner ${srv.highlight ? 'bg-white/20 text-white' : 'bg-indigo-50 text-indigo-600'}`}>
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center font-bold text-lg transition-all duration-300 group-hover:scale-110 group-hover:rotate-6 shadow-inner ${srv.highlight ? 'bg-white/20 text-white' : 'bg-indigo-50 text-indigo-600'}`}>
                   <i className={`${srv.icon}`}></i>
                 </div>
                 
                 {/* টাইটেল ও ডেসক্রিপশন */}
                 <div className="space-y-2">
                   <h3 className="text-xl sm:text-2xl font-black tracking-tight leading-tight">{srv.title}</h3>
-                  <p className={`text-xs sm:text-sm font-medium leading-relaxed ${srv.highlight ? 'text-indigo-100' : 'text-slate-500'}`}>{srv.desc}</p>
+                  <p className={`text-xs sm:text-sm font-medium leading-relaxed ${srv.highlight ? 'text-indigo-100' : 'text-slate-600'}`}>{srv.desc}</p>
                 </div>
               </div>
               

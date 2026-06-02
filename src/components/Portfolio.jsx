@@ -2,11 +2,11 @@ import React from 'react';
 const projects = [
   {
     id: "01",
-    title: "Next-Gen Dynamic Web App", // এখানে আপনার নতুন প্রজেক্টের নাম দিন
+    title: "Next-Gen Dynamic Web App", // এখানে আপনার নতুন প্রজেক্টের 
     tags: ["NEXT.JS", "MONGO DB", "TAILWIND", "API"],
     desc: "An advanced production-grade software system architected with cutting-edge workflows. Optimizes modern state management, high-speed query execution, and pixel-perfect interactive design components.",
     bg: "https://unsplash.com",
-    liveLink: "https://netlify.app", // নতুন প্রজেক্টের লিংক এখানে বসাবেন
+    liveLink: "https://netlify.app", // নতুন প্রজেক্টের লিংক 
     gitLink: "https://github.com"
   },
   {
@@ -15,8 +15,8 @@ const projects = [
     tags: ["REACT", "NODE.JS", "MONGODB", "TAILWIND"],
     desc: "A compassionate full-stack animal welfare web application engineered for pet adoptions. Features real-time adoption status updates, robust relational data schemas, dynamic category filtering, and an intuitive user dashboard.",
     bg: "https://unsplash.com",
-    liveLink: "https://vercel.app",
-    gitLink: "https://github.com"
+    liveLink: "https://pet-adoption-one-tau.vercel.app/",
+    gitLink: "https://github.com/sumaiya7-ops/Pet-Adoption.git"
   },
   {
     id: "03",
@@ -24,8 +24,8 @@ const projects = [
     tags: ["HTML5", "CSS3", "JAVASCRIPT", "AOS MOTION"],
     desc: "An exquisitely designed e-commerce storefront showcasing fluid micro-interactions and organic layout balancing. Features advanced semantic styling, dynamic product filtering, and a modern aesthetic aesthetic workflow.",
     bg: "https://unsplash.com",
-    liveLink: "https://github.io",
-    gitLink: "https://github.com/The-Plant-Kingdom"
+    liveLink: "https://sumaiya7-ops.github.io/The-Plant-Kingdom/",
+    gitLink: "https://github.com/sumaiya7-ops/The-Plant-Kingdom.git"
   },
   {
     id: "04",
@@ -33,8 +33,8 @@ const projects = [
     tags: ["JAVASCRIPT", "GITHUB API", "ASYNC AWAIT", "CSS3"],
     desc: "A production-grade developer workflow optimization tool powered directly by the official GitHub REST API. Enables seamless searching, real-time filtering, state management, and asynchronous tracking of global repository issues.",
     bg: "https://unsplash.com",
-    liveLink: "https://github.io",
-    gitLink: "https://github.com/Github-Issues-Tracker"
+    liveLink: "https://sumaiya7-ops.github.io/Github-Issues-Tracker/",
+    gitLink: "https://github.com/sumaiya7-ops/Github-Issues-Tracker.git"
   }
 ];
 
