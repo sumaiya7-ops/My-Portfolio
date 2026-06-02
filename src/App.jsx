@@ -10,7 +10,7 @@ import TechStack from './components/TechStack';
 import Expertise from './components/Expertise';
 import Portfolio from './components/Portfolio';
 import BehindScenes from './components/BehindScenes';
-import Academic from './components/Academic';
+
 import Timeline from './components/Timeline';
 
 import Contact from './components/Contact';
@@ -53,7 +53,7 @@ export default function App() {
         <div className="w-full max-w-full" data-aos="fade-up"><Expertise /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><Portfolio /></div>
         <div className="w-full max-w-full" data-aos="fade-up"><BehindScenes /></div>
-        <div className="w-full max-w-full" data-aos="fade-up"><Academic /></div>
+
         <div className="w-full max-w-full" data-aos="fade-up"><Timeline /></div>
 
         <div className="w-full max-w-full" data-aos="fade-up"><ChatAI /></div>
